@@ -1,0 +1,39 @@
+{
+   "apiVersion": "apps/v1",
+   "kind": "Deployment",
+   "metadata": {
+      "name": "obsidiand-deployment",
+      "labels": {
+         "app": "obsidiand"
+      }
+   },
+   "spec": {
+      "replicas": 3,
+      "selector": {
+         "matchLabels": {
+            "app": "obsidiand"
+         }
+      },
+      "template": {
+         "metadata": {
+            "labels": {
+               "app": "obsidiand"
+            }
+         },
+         "spec": {
+            "containers": [
+               {
+                  "name": "obsidiand",
+                  "image": "",
+				  "command": [ "/bin/bash", "-c", "obsidiand --daemon && tail -f /dev/null"],
+                  "ports": [
+                     {
+                        "containerPort": 1988
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   }
+}
