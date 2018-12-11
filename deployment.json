@@ -24,7 +24,7 @@
             "containers": [
                {
                   "name": "obsidiand",
-                  "image": "",
+                  "image": "registry.hub.docker.com/bohica/docker-obsidian:latest",
 				  "command": [ "/bin/bash", "-c", "obsidiand --daemon && tail -f /dev/null"],
                   "ports": [
                      {
