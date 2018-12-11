@@ -12,7 +12,11 @@ RUN chmod 777 /usr/bin/installlibsodium.sh
 
 RUN chmod 777 /usr/bin/config.sh
 
-RUN installlibsodium.sh
+RUN add-apt-repository ppa:chris-lea/libsodium
+
+RUN apt-get update
+
+RUN apt-get install libsodium-dev -y
 
 RUN config.sh
 
