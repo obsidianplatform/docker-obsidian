@@ -8,6 +8,10 @@ RUN apt-get install -f -y build-essential autoconf automake git g++ libtool make
 
 COPY bin/* /usr/bin/
 
+RUN chmod 777 /usr/bin/installlibsodium.sh
+
+RUN chmod 777 /usr/bin/config.sh
+
 RUN installlibsodium.sh
 
 RUN config.sh
