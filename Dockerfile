@@ -8,8 +8,6 @@ RUN apt-get install -f -y software-properties-common build-essential autoconf au
 
 COPY bin/* /usr/bin/
 
-RUN chmod 777 /usr/bin/installlibsodium.sh
-
 RUN chmod 777 /usr/bin/config.sh
 
 RUN add-apt-repository ppa:chris-lea/libsodium
