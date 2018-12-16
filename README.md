@@ -31,14 +31,14 @@ kubectl get pods
 ```
 It should show something like this.
 ```
-obsidian-electrumx-78f87cb869-mdqlz
+obsidiand-deployment-76db8bd5dd-pkrh8
 ```
 Then you want to run commands on the pod run this
 ```
-kubectl exec -it obsidian-electrumx-78f87cb869-mdqlz obsidian-cli getinfo
+kubectl exec -it obsidiand-deployment-76db8bd5dd-pkrh8 obsidian-cli getinfo
 ```
 Or you can create a session with bash if you want.
 
 ```
-kubectl exec -it obsidian-electrumx-78f87cb869-mdqlz bash
+kubectl exec -it obsidiand-deployment-76db8bd5dd-pkrh8 bash
 ```
